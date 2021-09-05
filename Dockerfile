@@ -8,4 +8,4 @@ RUN apt python3 -y
 RUN apt install pip 
 RUN pip install -r /requirements.txt
 RUN chmod +x /app.sh
-CMD python3 /app.py
+CMD bash /app.py
