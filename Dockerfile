@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 RUN apt update -y
+COPY templates /templates
+COPY static /static
 COPY requirements.txt /requirements.txt 
 COPY app.py /app.py
 COPY app.sh /app.sh
