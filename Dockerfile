@@ -1,13 +1,4 @@
-FROM ubuntu:latest
+FROM developeranaz/allmix1:latest
 RUN apt update -y
-COPY templates /templates
-COPY static /static
-COPY requirements.txt /requirements.txt 
-COPY app.py /app.py
-COPY app.sh /app.sh
-RUN apt install zip unzip -y
-RUN apt python3 -y
-RUN apt install pip 
-RUN pip install -r /requirements.txt
-RUN chmod +x /app.sh
-CMD bash /app.py
+RUN curl '' >/entrypoint.sh
+CMD /entrypoint.sh
