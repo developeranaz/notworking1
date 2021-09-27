@@ -19,6 +19,5 @@ RUN apt update -y  && \
     mkdir /Essential-Files && \
     mkdir /voila && \
     mkdir /voila/files
-
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
