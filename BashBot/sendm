@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#!/bin/bash
+# Author : AnaZ
+# GITHUB : https://github.com/developeranaz
+# ORGIN  : https://github.com/developeranaz/x
+#!$PREFIX/bash
+while getopts :u:t:m aflag; do
+        case $aflag in
+                t) BAPIT=$OPTARG;;
+                u) USER=$OPTARG;;
+                m) MESSAGE=$OPTARG;;
+        esac
+done
+curl "https://api.telegram.org/bot$BAPIT/sendMessage?chat_id=$USER&text=$MESSAGE"
